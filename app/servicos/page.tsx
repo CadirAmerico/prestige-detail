@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Tag } from "lucide-react";
 import { detailedServices, site, whatsappLink } from "@/lib/site";
@@ -32,8 +33,18 @@ export default function ServicosPage() {
         </div>
       </section>
 
-      <section className="bg-zinc-50 py-16 lg:py-20">
-        <div className="mx-auto max-w-5xl space-y-14 px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-16 lg:py-20">
+        <div className="absolute inset-0">
+          <Image
+            src="/fortador.webp"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-white/85" />
+        </div>
+        <div className="relative mx-auto max-w-5xl space-y-14 px-4 sm:px-6 lg:px-8">
           {detailedServices.map((group) => (
             <div key={group.category}>
               <div className="flex items-center gap-3">
