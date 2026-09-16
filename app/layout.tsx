@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import MobileActionBar from "@/components/MobileActionBar";
 import { site } from "@/lib/site";
 
 const geistSans = Geist({
@@ -21,6 +22,10 @@ export const metadata: Metadata = {
   description: site.description,
 };
 
+export const viewport: Viewport = {
+  themeColor: "#081c3f",
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -31,7 +36,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <div className="h-[76px] sm:hidden" aria-hidden="true" />
         <WhatsAppButton />
+        <MobileActionBar />
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
-import { Clock, Mail, MapPin } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { site, whatsappLink } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/icons";
 
@@ -76,15 +76,24 @@ export default function Contact() {
               </div>
             </div>
 
-            <a
-              href={whatsappLink("Olá! Estou no site e gostaria de falar convosco.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition hover:brightness-95"
-            >
-              <WhatsAppIcon className="size-5" />
-              {site.whatsappDisplay}
-            </a>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <a
+                href={whatsappLink("Olá! Estou no site e gostaria de falar convosco.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition hover:brightness-95"
+              >
+                <WhatsAppIcon className="size-5" />
+                {site.whatsappDisplay}
+              </a>
+              <a
+                href={`tel:+${site.whatsappNumber}`}
+                className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-brand-900 shadow-lg transition hover:bg-brand-50"
+              >
+                <Phone className="size-5" />
+                Ligar agora
+              </a>
+            </div>
           </div>
 
           <div className="overflow-hidden rounded-3xl ring-1 ring-white/15 lg:col-span-3">
