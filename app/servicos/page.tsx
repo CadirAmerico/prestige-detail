@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Tag } from "lucide-react";
-import { detailedServices, site, whatsappLink } from "@/lib/site";
+import { detailedServices, site, whatsappLink, basePath } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export default function ServicosPage() {
       <section className="relative overflow-hidden py-16 lg:py-20">
         <div className="absolute inset-0">
           <Image
-            src="/fortador.webp"
+            src={`${basePath}/fortador.webp`}
             alt=""
             fill
             sizes="100vw"

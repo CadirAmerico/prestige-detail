@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { whatsappLink, site } from "@/lib/site";
+import { whatsappLink, site, basePath } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/icons";
 
 const navLinks = [
@@ -27,7 +27,7 @@ export default function Navbar() {
           onClick={() => setOpen(false)}
         >
           <Image
-            src="/logo-prestige.svg"
+            src={`${basePath}/logo-prestige.svg`}
             alt={`Logo ${site.name}`}
             width={72}
             height={72}

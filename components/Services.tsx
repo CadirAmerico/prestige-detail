@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Car, Check, Sparkles } from "lucide-react";
-import { services, whatsappLink } from "@/lib/site";
+import { services, whatsappLink, basePath } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/icons";
 
-const servicesBg = "/fortador.webp";
+const servicesBg = `${basePath}/fortador.webp`;
 
 const icons = {
   car: Car,

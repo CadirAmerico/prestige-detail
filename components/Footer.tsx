@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { site } from "@/lib/site";
+import { site, basePath } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 sm:px-6 md:flex-row lg:px-8">
         <div className="flex items-center gap-2.5">
           <Image
-            src="/logo-prestige.svg"
+            src={`${basePath}/logo-prestige.svg`}
             alt={`Logo ${site.name}`}
             width={72}
             height={72}

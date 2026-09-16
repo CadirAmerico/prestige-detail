@@ -6,6 +6,7 @@ const isExport = process.env.NEXT_STATIC_EXPORT === "1";
 const nextConfig: NextConfig = {
   ...(isExport && { output: "export" as const }),
   ...(isExport && { basePath: "/prestige-detail" }),
+  ...(isExport && { env: { NEXT_PUBLIC_BASE_PATH: "/prestige-detail" } }),
   images: isExport
     ? { unoptimized: true }
     : {
