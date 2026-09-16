@@ -97,6 +97,79 @@ export const services = [
   },
 ] as const;
 
+export const detailedServices = [
+  {
+    category: "Lavagem & Detalhe",
+    items: [
+      {
+        name: "Lavagem simples exterior",
+        description: "Pré-lavagem, champô, jantes e secagem.",
+        price: "desde 10 €",
+      },
+      {
+        name: "Lavagem a vapor",
+        description: "Limpeza ecológica com vapor, interior e exterior.",
+        price: "desde 15 €",
+      },
+      {
+        name: "Lavagem completa",
+        description: "Exterior + aspiração e limpeza interior.",
+        price: "desde 25 €",
+      },
+      {
+        name: "Limpeza interior profunda",
+        description: "Estofos, plásticos, vidros e higienização com ozono.",
+        price: "desde 30 €",
+      },
+      {
+        name: "Enceramento e proteção",
+        description: "Cera de proteção com brilho duradouro.",
+        price: "desde 35 €",
+      },
+      {
+        name: "Polimento profissional",
+        description: "Remoção de riscos leves e oxidação.",
+        price: "desde 90 €",
+      },
+    ],
+  },
+  {
+    category: "Mecânica Auto",
+    items: [
+      {
+        name: "Diagnóstico eletrónico",
+        description: "Leitura de avarias com equipamento profissional.",
+        price: "desde 25 €",
+      },
+      {
+        name: "Mudança de óleo + filtros",
+        description: "Óleo, filtro de óleo, ar e habitáculo.",
+        price: "desde 60 €",
+      },
+      {
+        name: "Travões (pastilhas)",
+        description: "Substituição de pastilhas, eixo dianteiro ou traseiro.",
+        price: "desde 50 €",
+      },
+      {
+        name: "Revisão geral",
+        description: "Verificação de 30 pontos + mudança de óleo.",
+        price: "desde 90 €",
+      },
+      {
+        name: "Alinhamento de direção",
+        description: "Alinhamento computadorizado dos 4 eixos.",
+        price: "desde 30 €",
+      },
+      {
+        name: "Ar condicionado",
+        description: "Recarga de gás e higienização do circuito.",
+        price: "desde 50 €",
+      },
+    ],
+  },
+] as const;
+
 export const testimonials = [
   {
     name: "Miguel Santos",
